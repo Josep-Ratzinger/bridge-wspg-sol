@@ -1,0 +1,18 @@
+{
+  "particion_sha256": "b0d0a8ebb585f514f9600ac711c8b9319c796da94e30911a9d4f8d749dbd6dab",
+  "umbrales": {
+    "IoU": {
+      "columnas_pilares": 0.7791218913110224,
+      "vigas_cabezales": 0.048967731231586764,
+      "tablero": 0.49798672785206144,
+      "barandas_laterales": 0.8517067577134092,
+      "pista_accesos": 0.004670549571386477,
+      "separador_central": 0.0,
+      "superficie_inferior_suelo_base": 0.7149739060618225,
+      "estribos": null,
+      "vegetacion": null,
+      "senales": null
+    },
+    "barandas_tramos_cobertura50": 1.0
+  }
+}

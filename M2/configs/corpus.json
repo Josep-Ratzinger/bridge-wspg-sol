@@ -1,0 +1,51 @@
+{
+  "reales": [
+    {
+      "id": "semanticbridge_12",
+      "division": "train",
+      "semilla": 42,
+      "miembro": "bridge_12_fr_blk.ply"
+    },
+    {
+      "id": "semanticbridge_18",
+      "division": "train",
+      "semilla": 47,
+      "miembro": "bridge_18_fr_blk.ply"
+    },
+    {
+      "id": "semanticbridge_16",
+      "division": "val",
+      "semilla": 48,
+      "miembro": "bridge_16_fr_blk.ply"
+    },
+    {
+      "id": "semanticbridge_15",
+      "division": "train",
+      "semilla": 49,
+      "miembro": "bridge_15_fr_blk.ply"
+    },
+    {
+      "id": "uav_palgok",
+      "division": "train",
+      "semilla": 100
+    },
+    {
+      "id": "uav_wonli",
+      "division": "train",
+      "semilla": 101
+    },
+    {
+      "id": "uav_seokdap",
+      "division": "val",
+      "semilla": 102
+    }
+  ],
+  "sinteticos": {
+    "semillas_inicio": 82000,
+    "entrenamiento": 48,
+    "validacion": 8
+  },
+  "max_puntos_reales": 180000,
+  "fuentes_por_defecto": "D:\\USUARIO\\Documentos\\Nube de puntos tesis\\P2C_Data",
+  "licencias": "SemanticBridge CC BY NC 4.0; UAV uso académico; conservar atribución"
+}

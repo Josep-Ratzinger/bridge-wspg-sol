@@ -1,0 +1,11 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.4.1+cu124
+torchvision==0.19.1+cu124
+numpy==1.26.4
+timm==0.4.5
+einops==0.8.1
+matplotlib==3.10.7
+easydict==1.13
+PyYAML==6.0.3
+# pointnet2_ops se compila con scripts/compilar_pointnet2.cmd.
+# Chamfer CUDA ya instalado; binario y fuente se verifican por SHA-256.

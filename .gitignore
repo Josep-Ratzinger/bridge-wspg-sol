@@ -1,0 +1,27 @@
+# Entorno y configuracion personal
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Datos y resultados: se conservan fuera del repositorio
+*.ply
+*.las
+*.laz
+*.npz
+*.npy
+*.h5
+*.pt
+*.pth
+resultados/
+
+# Salidas y configuración local de la estructura M1/M2
+M1/limpieza_y_preparacion/resultados/
+M1/limpieza_y_preparacion/procesamiento_manual/entrada.json
+M1/SPG/resultados/
+M1/clases/datos/
+M1/clases/resultados/
+M2/WSPG/resultados/
+M2/SOL/resultados/
+M1/respaldo_completado/

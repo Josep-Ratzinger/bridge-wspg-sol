@@ -1,0 +1,48 @@
+{
+  "model": "AdaPoinTr",
+  "repository": "https://github.com/yuxumin/PoinTr",
+  "commit": "4603257ed3db9e7dad349b712e1b2fe0da207015",
+  "input_ply": "M1/limpieza_y_preparacion/resultados/preparado/puente_preparado.ply",
+  "input_npz": "M1/limpieza_y_preparacion/resultados/preparado/preparacion.npz",
+  "data_root": "D:\\USUARIO\\Documentos\\Nube de puntos tesis\\AdaPoinTr_Data",
+  "upstream_architecture_config": "cfgs/PCN_models/AdaPoinTr.yaml",
+  "training_method": "AdaPoinTr supervisado con conjuntos sintéticos y deterioros combinados; ajuste geométrico automático en inferencia",
+  "checkpoint": "modelos/completado_contextual/mejor.pt",
+  "trained_on_synthetic_contexts": true,
+  "automatic_completion": {
+    "method": "AdaPoinTr + seleccion geometrica automatica de secciones, perfiles y extremos observados",
+    "entrypoint": "scripts/completar.ps1",
+    "verified_output": "resultados/completado/puente_completado.ply",
+    "execution_record": "resultados/completado/ejecucion.json",
+    "column_candidates": [
+      "cilindrica",
+      "rectangular",
+      "eliptica",
+      "octagonal"
+    ],
+    "beam_candidates": [
+      "rectangular",
+      "trapezoidal",
+      "curvo",
+      "hombros",
+      "perfil_I_simplificado"
+    ],
+    "endpoint_candidates": [
+      "recto",
+      "inclinado",
+      "curvo",
+      "cambio_de_pendiente"
+    ],
+    "selection": "error en bandas de altura reservadas y parsimonia; incertidumbre registrada; biblioteca acotada",
+    "manual_lurin_context_used": false,
+    "visual_review_pending": false,
+    "scope": "conjunto dominante de apoyos alineados y cabezal; resto conservado; sin evidencia suficiente puede no completarse",
+    "visual_review_accepted_by_user": true
+  },
+  "trained_on_real_bridges": false,
+  "approved_for_lurin": true,
+  "approval_scope": "resultado visual aceptado por el usuario; sin referencia completa para verificar las superficies originalmente ausentes",
+  "completion_goal": "recuperar huecos y tramos faltantes respetando formas observadas o aprendidas; no exige una etapa separada de clasificacion de seccion",
+  "training_initial_checkpoint": "modelos/inicializacion/mejor.pt",
+  "training_generator": "src/geometrias_contextuales.py"
+}

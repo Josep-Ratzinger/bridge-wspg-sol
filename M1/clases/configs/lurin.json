@@ -1,0 +1,56 @@
+{
+  "puente": "Lurin",
+  "sha256_entrada_autorizada": "466f9f760587b7ee2399c28120c4efca25dda0452bab83678e84051db0e8a8c7",
+  "metodo": "regiones por punto definidas a partir de vistas observadas y fotogramas; sin leer grupos SPG",
+  "entrenado": false,
+  "alcance": "anotacion asistida especifica de Lurin, no clasificador general WSPG",
+  "clases": [
+    {"id": -1, "nombre": "sin_asignar", "rgb": [145, 145, 145]},
+    {"id": 0, "nombre": "columnas_pilares", "rgb": [230, 65, 60]},
+    {"id": 1, "nombre": "vigas_cabezales", "rgb": [245, 155, 35]},
+    {"id": 2, "nombre": "tablero", "rgb": [45, 125, 225]},
+    {"id": 3, "nombre": "barandas_laterales", "rgb": [150, 70, 200]},
+    {"id": 4, "nombre": "pista_accesos", "rgb": [55, 175, 105]},
+    {"id": 5, "nombre": "separador_central", "rgb": [35, 200, 215]},
+    {"id": 6, "nombre": "superficie_inferior_suelo_base", "rgb": [155, 105, 65]}
+  ],
+  "limites_span_x": [-21.8, 35.2],
+  "limites_tablero_y": [-10.8, 12.6],
+  "plano_tablero_z": -0.041810836791990935,
+  "fila_columnas_x": [6.9, 9.6],
+  "fila_columnas_y": [-11.2, 13.6],
+  "base_columnas_z_intercepto": -6.22,
+  "base_columnas_z_pendiente_y": -0.02,
+  "base_viga_z": -2.55,
+  "techo_cabezal_z": -1.4,
+  "bandas_baranda_y": [[-11.7, -10.05], [11.9, 13.6], [-0.05, 1.6]],
+  "franja_tablero_y": [7.8, 9.5],
+  "franja_tablero_z_relativo": [-0.18, 0.60],
+  "separador_y": [0.05, 1.50],
+  "separador_z_relativo": [-0.08, 0.75],
+  "accesos_z_relativo": [-0.65, 0.65],
+  "superficie_inferior_x": [5.8, 10.7],
+  "superficie_inferior_y": [-12.8, 15.8],
+  "superficie_inferior_z_relativo_base": [-0.65, 0.10],
+  "correcciones_usuario": {
+    "revision": "identificacion visual de regiones generales por el usuario; sin verificar cada punto de frontera",
+    "accesos": "las dos extensiones grises de los extremos son pista",
+    "franja_lateral": "la linea gris longitudinal pertenece al tablero",
+    "mediana": "la linea central antes azul/morada es el separador de la doble via",
+    "base": "dar categoria propia a la superficie bajo columnas; no se confirma si es suelo, pavimento o cimentacion"
+  },
+  "fuentes_visuales": {
+    "fotogramas": "D:/USUARIO/Documentos/Nube de puntos tesis/Prueba 2/images",
+    "muestra_revisada": ["v1_00001.jpg", "v1_00011.jpg", "v1_00021.jpg", "v1_00031.jpg", "v1_00042.jpg", "v1_00052.jpg", "v1_00062.jpg", "v1_00072.jpg", "v1_00083.jpg", "v1_00093.jpg", "v1_00103.jpg", "v1_00113.jpg", "v1_00124.jpg", "v1_00134.jpg", "v1_00144.jpg", "v1_00155.jpg"],
+    "vistas_nube": ["resultados/revision/vistas_observadas.png", "resultados/revision/bandas_altura.png"]
+  },
+  "taxonomia_fuente": "https://wisconsindot.gov/dtsdManuals/strct/inspection/insp-fm-pt2ch1.pdf",
+  "referencia": {
+    "tipo": "anotacion_asistida_preliminar",
+    "revision": "asistente sobre vistas y fotogramas con correcciones de regiones por el usuario; no revision humana experta ni verificacion punto a punto",
+    "incluir_estimados": false,
+    "usar_formas_del_completado_como_verdad": false,
+    "usar_superpuntos_para_asignar_clases": false,
+    "limite": "cobertura ampliada con accesos, franja de tablero, separador y superficie inferior revisados como regiones; persisten fronteras ambiguas sin verificar; pureza parcial no extrapolable"
+  }
+}
