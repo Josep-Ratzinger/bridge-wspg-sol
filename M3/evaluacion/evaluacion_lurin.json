@@ -1,0 +1,1073 @@
+{
+  "sin_aumento": {
+    "mIoU": 0.5220814853277659,
+    "IoU": {
+      "columnas_pilares": 0.890429073001687,
+      "vigas_cabezales": 0.5489072667409847,
+      "tablero": 0.5165212788748724,
+      "barandas_laterales": 0.911325588061838,
+      "pista_accesos": 0.030649231999086392,
+      "separador_central": 0.0,
+      "superficie_inferior_suelo_base": 0.7567379586158929,
+      "estribos": null,
+      "vegetacion": null,
+      "senales": null
+    },
+    "exactitud": 0.6226956272326667,
+    "matriz_confusion": [
+      [
+        39056,
+        244,
+        0,
+        0,
+        0,
+        0,
+        113,
+        0,
+        0,
+        0
+      ],
+      [
+        365,
+        21173,
+        7399,
+        29,
+        0,
+        0,
+        0,
+        3020,
+        0,
+        0
+      ],
+      [
+        0,
+        4849,
+        1024662,
+        29317,
+        971,
+        0,
+        0,
+        0,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        4085,
+        499123,
+        0,
+        0,
+        0,
+        0,
+        54,
+        0
+      ],
+      [
+        0,
+        426,
+        831975,
+        15077,
+        26838,
+        0,
+        0,
+        237,
+        126,
+        0
+      ],
+      [
+        0,
+        1068,
+        80510,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4084,
+        0,
+        0,
+        0,
+        0,
+        0,
+        13056,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "puntos_etiqueta_exacta": 2607868,
+    "clases_ausentes_no_evaluadas": [
+      "estribos",
+      "vegetacion",
+      "senales"
+    ],
+    "recall": {
+      "columnas_pilares": 0.9909420749498896,
+      "vigas_cabezales": 0.6619458513099481,
+      "tablero": 0.9668392139693491,
+      "barandas_laterales": 0.9917756556227174,
+      "pista_accesos": 0.0306832563717661,
+      "separador_central": 0.0,
+      "superficie_inferior_suelo_base": 0.7617269544924155,
+      "estribos": null,
+      "vegetacion": null,
+      "senales": null
+    },
+    "precision": {
+      "columnas_pilares": 0.8977358924261579,
+      "vigas_cabezales": 0.7627161383285302,
+      "tablero": 0.5258368567471214,
+      "barandas_laterales": 0.9182651090056113,
+      "pista_accesos": 0.9650832464310115,
+      "separador_central": null,
+      "superficie_inferior_suelo_base": 0.9914192421596173,
+      "estribos": 0.0,
+      "vegetacion": 0.0,
+      "senales": null
+    },
+    "barandas_tramos_cobertura50": 1.0,
+    "barandas_tramos_cobertura90": 0.99,
+    "barandas_tramos_evaluados": 200,
+    "puntos_evaluados": 2607868,
+    "referencia": "asistida preliminar, observados; no verdad independiente",
+    "F1": {
+      "columnas_pilares": 0.9420391229889771,
+      "vigas_cabezales": 0.7087671141164262,
+      "tablero": 0.6811922602999497,
+      "barandas_laterales": 0.9536058050538205,
+      "pista_accesos": 0.05947558305484394,
+      "separador_central": 0.0,
+      "superficie_inferior_suelo_base": 0.8615262793229733,
+      "estribos": null,
+      "vegetacion": null,
+      "senales": null
+    },
+    "baranda_como_tablero": {
+      "puntos": 4085,
+      "total_baranda": 503262,
+      "fraccion": 0.008117044402319269
+    },
+    "frontera_spg": {
+      "mIoU": 0.5363010016028179,
+      "IoU": {
+        "columnas_pilares": 0.876305375398483,
+        "vigas_cabezales": 0.6154744116548375,
+        "tablero": 0.559135123801568,
+        "barandas_laterales": 0.9492385329368298,
+        "pista_accesos": 0.003490133833555788,
+        "separador_central": 0.0,
+        "superficie_inferior_suelo_base": 0.7504634335944508,
+        "estribos": null,
+        "vegetacion": null,
+        "senales": null
+      },
+      "exactitud": 0.679484677637587,
+      "matriz_confusion": [
+        [
+          31887,
+          189,
+          0,
+          0,
+          0,
+          0,
+          113,
+          0,
+          0,
+          0
+        ],
+        [
+          139,
+          13181,
+          4925,
+          29,
+          0,
+          0,
+          0,
+          1467,
+          0,
+          0
+        ],
+        [
+          0,
+          446,
+          672015,
+          12732,
+          391,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3044,
+          421348,
+          0,
+          0,
+          0,
+          0,
+          28,
+          0
+        ],
+        [
+          0,
+          409,
+          434473,
+          6695,
+          1548,
+          0,
+          0,
+          2,
+          18,
+          0
+        ],
+        [
+          0,
+          631,
+          73857,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4060,
+          0,
+          0,
+          0,
+          0,
+          0,
+          12550,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "puntos_etiqueta_exacta": 1696181,
+      "clases_ausentes_no_evaluadas": [
+        "estribos",
+        "vegetacion",
+        "senales"
+      ],
+      "F1": {
+        "columnas_pilares": 0.9340754302453314,
+        "vigas_cabezales": 0.7619735815244096,
+        "tablero": 0.7172375444127695,
+        "barandas_laterales": 0.9739583092549016,
+        "pista_accesos": 0.006955990329915252,
+        "separador_central": 0.0,
+        "superficie_inferior_suelo_base": 0.8574454275270728,
+        "estribos": null,
+        "vegetacion": null,
+        "senales": null
+      },
+      "baranda_como_tablero": {
+        "puntos": 3044,
+        "total_baranda": 424420,
+        "fraccion": 0.007172140803920645
+      }
+    },
+    "baranda_como_tablero_en_borde": {
+      "puntos": 1002,
+      "total_baranda": 373924
+    },
+    "epoca": 43,
+    "mIoU_val_real": 0.765793875278481
+  },
+  "uniforme": {
+    "mIoU": 0.5368294276425571,
+    "IoU": {
+      "columnas_pilares": 0.8632862361899731,
+      "vigas_cabezales": 0.6705414577318544,
+      "tablero": 0.5273719862322661,
+      "barandas_laterales": 0.887836453418505,
+      "pista_accesos": 0.07421449128442933,
+      "separador_central": 0.0,
+      "superficie_inferior_suelo_base": 0.7345553686408725,
+      "estribos": null,
+      "vegetacion": null,
+      "senales": null
+    },
+    "exactitud": 0.6367040049573062,
+    "matriz_confusion": [
+      [
+        39226,
+        88,
+        0,
+        0,
+        0,
+        0,
+        99,
+        0,
+        0,
+        0
+      ],
+      [
+        1548,
+        26477,
+        219,
+        45,
+        0,
+        0,
+        0,
+        3697,
+        0,
+        0
+      ],
+      [
+        0,
+        5902,
+        1016153,
+        36469,
+        1282,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2215,
+        500912,
+        0,
+        0,
+        0,
+        0,
+        135,
+        0
+      ],
+      [
+        0,
+        781,
+        784058,
+        24091,
+        65009,
+        0,
+        0,
+        715,
+        1,
+        24
+      ],
+      [
+        0,
+        729,
+        80526,
+        327,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4477,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12663,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "puntos_etiqueta_exacta": 2607868,
+    "clases_ausentes_no_evaluadas": [
+      "estribos",
+      "vegetacion",
+      "senales"
+    ],
+    "recall": {
+      "columnas_pilares": 0.9952553725927993,
+      "vigas_cabezales": 0.8277683986744201,
+      "tablero": 0.9588103860517868,
+      "barandas_laterales": 0.9953304640525213,
+      "pista_accesos": 0.07432326602102028,
+      "separador_central": 0.0,
+      "superficie_inferior_suelo_base": 0.7387981330221703,
+      "estribos": null,
+      "vegetacion": null,
+      "senales": null
+    },
+    "precision": {
+      "columnas_pilares": 0.866853771187377,
+      "vigas_cabezales": 0.779262442240339,
+      "tablero": 0.5395967758636895,
+      "barandas_laterales": 0.8915499676066666,
+      "pista_accesos": 0.9806610248751716,
+      "separador_central": null,
+      "superficie_inferior_suelo_base": 0.9922425952045134,
+      "estribos": 0.0,
+      "vegetacion": 0.0,
+      "senales": 0.0
+    },
+    "barandas_tramos_cobertura50": 1.0,
+    "barandas_tramos_cobertura90": 0.995,
+    "barandas_tramos_evaluados": 200,
+    "puntos_evaluados": 2607868,
+    "referencia": "asistida preliminar, observados; no verdad independiente",
+    "F1": {
+      "columnas_pilares": 0.9266276103184352,
+      "vigas_cabezales": 0.8027833785607082,
+      "tablero": 0.6905612921881482,
+      "barandas_laterales": 0.9405861951768181,
+      "pista_accesos": 0.13817443701712062,
+      "separador_central": 0.0,
+      "superficie_inferior_suelo_base": 0.8469667580763829,
+      "estribos": null,
+      "vegetacion": null,
+      "senales": null
+    },
+    "baranda_como_tablero": {
+      "puntos": 2215,
+      "total_baranda": 503262,
+      "fraccion": 0.004401286010070301
+    },
+    "frontera_spg": {
+      "mIoU": 0.5559197966543348,
+      "IoU": {
+        "columnas_pilares": 0.8586470194239786,
+        "vigas_cabezales": 0.8033920478437602,
+        "tablero": 0.561664580884119,
+        "barandas_laterales": 0.928414927072185,
+        "pista_accesos": 0.011209402277959803,
+        "separador_central": 0.0,
+        "superficie_inferior_suelo_base": 0.728110599078341,
+        "estribos": null,
+        "vegetacion": null,
+        "senales": null
+      },
+      "exactitud": 0.6811301388236279,
+      "matriz_confusion": [
+        [
+          32049,
+          41,
+          0,
+          0,
+          0,
+          0,
+          99,
+          0,
+          0,
+          0
+        ],
+        [
+          692,
+          17195,
+          123,
+          45,
+          0,
+          0,
+          0,
+          1686,
+          0,
+          0
+        ],
+        [
+          0,
+          662,
+          666474,
+          18126,
+          322,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1914,
+          422465,
+          0,
+          0,
+          0,
+          0,
+          41,
+          0
+        ],
+        [
+          0,
+          651,
+          425111,
+          12137,
+          4971,
+          0,
+          0,
+          275,
+          0,
+          0
+        ],
+        [
+          0,
+          308,
+          73873,
+          311,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4444,
+          0,
+          0,
+          0,
+          0,
+          0,
+          12166,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "puntos_etiqueta_exacta": 1696181,
+      "clases_ausentes_no_evaluadas": [
+        "estribos",
+        "vegetacion",
+        "senales"
+      ],
+      "F1": {
+        "columnas_pilares": 0.9239484533110387,
+        "vigas_cabezales": 0.8909788071920824,
+        "tablero": 0.7193152585507687,
+        "barandas_laterales": 0.9628788016920721,
+        "pista_accesos": 0.022170288869364327,
+        "separador_central": 0.0,
+        "superficie_inferior_suelo_base": 0.8426666666666667,
+        "estribos": null,
+        "vegetacion": null,
+        "senales": null
+      },
+      "baranda_como_tablero": {
+        "puntos": 1914,
+        "total_baranda": 424420,
+        "fraccion": 0.004509683803779275
+      }
+    },
+    "baranda_como_tablero_en_borde": {
+      "puntos": 536,
+      "total_baranda": 373924
+    },
+    "epoca": 90,
+    "mIoU_val_real": 0.8009337920505368
+  },
+  "dirigido": {
+    "mIoU": 0.5592889571828462,
+    "IoU": {
+      "columnas_pilares": 0.9022262334536703,
+      "vigas_cabezales": 0.726433265352368,
+      "tablero": 0.5310348247088611,
+      "barandas_laterales": 0.8487180788952632,
+      "pista_accesos": 0.1188495827654748,
+      "separador_central": 0.0,
+      "superficie_inferior_suelo_base": 0.787760715104286,
+      "estribos": null,
+      "vegetacion": null,
+      "senales": null
+    },
+    "exactitud": 0.6445606142642188,
+    "matriz_confusion": [
+      [
+        38987,
+        70,
+        0,
+        7,
+        0,
+        0,
+        311,
+        38,
+        0,
+        0
+      ],
+      [
+        407,
+        25646,
+        70,
+        241,
+        0,
+        0,
+        1,
+        5621,
+        0,
+        0
+      ],
+      [
+        0,
+        2660,
+        996036,
+        52346,
+        8757,
+        0,
+        0,
+        0,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        1576,
+        501516,
+        0,
+        0,
+        0,
+        0,
+        170,
+        0
+      ],
+      [
+        0,
+        471,
+        734026,
+        33762,
+        104996,
+        0,
+        0,
+        1386,
+        24,
+        14
+      ],
+      [
+        0,
+        117,
+        80173,
+        1292,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3392,
+        0,
+        0,
+        0,
+        0,
+        0,
+        13748,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "puntos_etiqueta_exacta": 2607868,
+    "clases_ausentes_no_evaluadas": [
+      "estribos",
+      "vegetacion",
+      "senales"
+    ],
+    "recall": {
+      "columnas_pilares": 0.9891913835536498,
+      "vigas_cabezales": 0.8017882823735384,
+      "tablero": 0.9398286101418561,
+      "barandas_laterales": 0.996530634142852,
+      "pista_accesos": 0.12003946590692129,
+      "separador_central": 0.0,
+      "superficie_inferior_suelo_base": 0.802100350058343,
+      "estribos": null,
+      "vegetacion": null,
+      "senales": null
+    },
+    "precision": {
+      "columnas_pilares": 0.9112092740616089,
+      "vigas_cabezales": 0.8854439994475901,
+      "tablero": 0.5497248439605029,
+      "barandas_laterales": 0.8512332729087317,
+      "pista_accesos": 0.9230174149253206,
+      "separador_central": null,
+      "superficie_inferior_suelo_base": 0.9778093883357041,
+      "estribos": 0.0,
+      "vegetacion": 0.0,
+      "senales": 0.0
+    },
+    "barandas_tramos_cobertura50": 1.0,
+    "barandas_tramos_cobertura90": 1.0,
+    "barandas_tramos_evaluados": 200,
+    "puntos_evaluados": 2607868,
+    "referencia": "asistida preliminar, observados; no verdad independiente",
+    "F1": {
+      "columnas_pilares": 0.9486003479361063,
+      "vigas_cabezales": 0.8415422477440525,
+      "tablero": 0.6936939854517571,
+      "barandas_laterales": 0.9181692856083615,
+      "pista_accesos": 0.2124496171714392,
+      "separador_central": 0.0,
+      "superficie_inferior_suelo_base": 0.8812820512820513,
+      "estribos": null,
+      "vegetacion": null,
+      "senales": null
+    },
+    "baranda_como_tablero": {
+      "puntos": 1576,
+      "total_baranda": 503262,
+      "fraccion": 0.003131569639670788
+    },
+    "frontera_spg": {
+      "mIoU": 0.5653179602477837,
+      "IoU": {
+        "columnas_pilares": 0.89074431484434,
+        "vigas_cabezales": 0.8068187344973493,
+        "tablero": 0.555291479325802,
+        "barandas_laterales": 0.9005260793568675,
+        "pista_accesos": 0.018796166810097534,
+        "separador_central": 0.0,
+        "superficie_inferior_suelo_base": 0.7850489469000297,
+        "estribos": null,
+        "vegetacion": null,
+        "senales": null
+      },
+      "exactitud": 0.6763582424281371,
+      "matriz_confusion": [
+        [
+          31845,
+          61,
+          0,
+          1,
+          0,
+          0,
+          244,
+          38,
+          0,
+          0
+        ],
+        [
+          184,
+          16589,
+          53,
+          185,
+          0,
+          0,
+          1,
+          2729,
+          0,
+          0
+        ],
+        [
+          0,
+          246,
+          654195,
+          28080,
+          3063,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1359,
+          422978,
+          0,
+          0,
+          0,
+          0,
+          83,
+          0
+        ],
+        [
+          0,
+          396,
+          417923,
+          15832,
+          8387,
+          0,
+          0,
+          607,
+          0,
+          0
+        ],
+        [
+          0,
+          117,
+          73192,
+          1183,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3378,
+          0,
+          0,
+          0,
+          0,
+          0,
+          13232,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "puntos_etiqueta_exacta": 1696181,
+      "clases_ausentes_no_evaluadas": [
+        "estribos",
+        "vegetacion",
+        "senales"
+      ],
+      "F1": {
+        "columnas_pilares": 0.9422155157109888,
+        "vigas_cabezales": 0.8930820995962315,
+        "tablero": 0.7140674101378264,
+        "barandas_laterales": 0.947659797082714,
+        "pista_accesos": 0.036898778033194385,
+        "separador_central": 0.0,
+        "superficie_inferior_suelo_base": 0.8795825439558613,
+        "estribos": null,
+        "vegetacion": null,
+        "senales": null
+      },
+      "baranda_como_tablero": {
+        "puntos": 1359,
+        "total_baranda": 424420,
+        "fraccion": 0.003202016870081523
+      }
+    },
+    "baranda_como_tablero_en_borde": {
+      "puntos": 257,
+      "total_baranda": 373924
+    },
+    "epoca": 115,
+    "mIoU_val_real": 0.7889574898957792
+  }
+}

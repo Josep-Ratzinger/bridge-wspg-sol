@@ -1,0 +1,873 @@
+{
+  "lote": "uniforme",
+  "clases": [
+    "columnas_pilares",
+    "vigas_cabezales",
+    "tablero",
+    "barandas_laterales",
+    "pista_accesos",
+    "separador_central",
+    "superficie_inferior_suelo_base",
+    "estribos",
+    "vegetacion",
+    "senales"
+  ],
+  "mascaras": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    80,
+    6
+  ],
+  "taxonomia_version": 2,
+  "puentes": [
+    {
+      "id": "m3_uniforme_00",
+      "tipo": "sintetico",
+      "division": "train",
+      "situacion": "escena_general",
+      "parametros": {
+        "semilla": 91002,
+        "longitud": 40.94064883485534,
+        "ancho": 14.356362738955838,
+        "altura": 5.327121647847344,
+        "vanos": 4,
+        "familia_apoyo": "pilotes",
+        "seccion_columna": "rectangular",
+        "seccion_viga": "trapezoidal",
+        "baranda": "mixta",
+        "trazado": "arco",
+        "amplitud_curva": 2.3956193451019776,
+        "separador": true,
+        "combinacion_independiente": true,
+        "dimensiones": "propias, no copiadas de planos",
+        "validacion_estructural": false
+      },
+      "taxonomia_version": 2,
+      "sha256": "069765e96c638156efa3240cc099e4248a2c8808e1339a9b9cf695808fc08a26",
+      "puntos": 22000,
+      "superpuntos": 514,
+      "aristas": 6762,
+      "histograma_mascaras": [
+        6325,
+        4009,
+        2456,
+        3831,
+        1204,
+        508,
+        1806,
+        1171,
+        494,
+        196,
+        0,
+        0
+      ],
+      "marco": {
+        "centro": [
+          -6.1339263916015625,
+          0.7050042152404785,
+          -1.4229989051818848
+        ],
+        "rotacion": [
+          [
+            0.9999993827451308,
+            -0.0011110847660012531,
+            0.0
+          ],
+          [
+            0.0011110847660012531,
+            0.9999993827451308,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "perfil_spg": "mismas funciones M1: geof45, partición k10 lambda.03, Delaunay13, 128x8",
+      "original_sin_modificar": true,
+      "archivo": "grafos/m3_uniforme_00.npz"
+    },
+    {
+      "id": "m3_uniforme_01",
+      "tipo": "sintetico",
+      "division": "train",
+      "situacion": "escena_general",
+      "parametros": {
+        "semilla": 91035,
+        "longitud": 37.09810547807622,
+        "ancho": 13.570237604382559,
+        "altura": 6.637316926677484,
+        "vanos": 4,
+        "familia_apoyo": "multicolumna",
+        "seccion_columna": "rectangular",
+        "seccion_viga": "cajon_exterior",
+        "baranda": "metal_horizontal",
+        "trazado": "arco",
+        "amplitud_curva": 5.6884884972711385,
+        "separador": true,
+        "combinacion_independiente": true,
+        "dimensiones": "propias, no copiadas de planos",
+        "validacion_estructural": false
+      },
+      "taxonomia_version": 2,
+      "sha256": "dea4f074cede88495a51cf05ede72d7540102b40eb81f9c391afaedd51db1352",
+      "puntos": 22000,
+      "superpuntos": 586,
+      "aristas": 7654,
+      "histograma_mascaras": [
+        7129,
+        3682,
+        2855,
+        3369,
+        887,
+        633,
+        1860,
+        890,
+        491,
+        204,
+        0,
+        0
+      ],
+      "marco": {
+        "centro": [
+          0.3105326294898987,
+          1.8337488174438477,
+          -1.535097360610962
+        ],
+        "rotacion": [
+          [
+            0.9996182855352507,
+            -0.02762758084896665,
+            0.0
+          ],
+          [
+            0.02762758084896665,
+            0.9996182855352507,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "perfil_spg": "mismas funciones M1: geof45, partición k10 lambda.03, Delaunay13, 128x8",
+      "original_sin_modificar": true,
+      "archivo": "grafos/m3_uniforme_01.npz"
+    },
+    {
+      "id": "m3_uniforme_02",
+      "tipo": "sintetico",
+      "division": "train",
+      "situacion": "escena_general",
+      "parametros": {
+        "semilla": 91061,
+        "longitud": 64.51497993308136,
+        "ancho": 8.823512147967602,
+        "altura": 8.38754550704219,
+        "vanos": 3,
+        "familia_apoyo": "multicolumna",
+        "seccion_columna": "octogonal",
+        "seccion_viga": "I",
+        "baranda": "metal_diagonal",
+        "trazado": "S",
+        "amplitud_curva": 3.6318770930003206,
+        "separador": true,
+        "combinacion_independiente": true,
+        "dimensiones": "propias, no copiadas de planos",
+        "validacion_estructural": false
+      },
+      "taxonomia_version": 2,
+      "sha256": "62a1f63e024b8925120a78798949024056cefe92b4074e8b5cbef52a61e932a4",
+      "puntos": 22000,
+      "superpuntos": 597,
+      "aristas": 7694,
+      "histograma_mascaras": [
+        4285,
+        2792,
+        2575,
+        7440,
+        976,
+        582,
+        1727,
+        953,
+        472,
+        198,
+        0,
+        0
+      ],
+      "marco": {
+        "centro": [
+          4.8231892585754395,
+          0.13457277417182922,
+          -0.24840712547302246
+        ],
+        "rotacion": [
+          [
+            0.9968754014343586,
+            -0.07899008808126816,
+            0.0
+          ],
+          [
+            0.07899008808126816,
+            0.9968754014343586,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "perfil_spg": "mismas funciones M1: geof45, partición k10 lambda.03, Delaunay13, 128x8",
+      "original_sin_modificar": true,
+      "archivo": "grafos/m3_uniforme_02.npz"
+    },
+    {
+      "id": "m3_uniforme_03",
+      "tipo": "sintetico",
+      "division": "train",
+      "situacion": "escena_general",
+      "parametros": {
+        "semilla": 91090,
+        "longitud": 67.70612622481832,
+        "ancho": 11.082309963322457,
+        "altura": 3.8226390477522965,
+        "vanos": 3,
+        "familia_apoyo": "multicolumna",
+        "seccion_columna": "circular",
+        "seccion_viga": "I",
+        "baranda": "barrera",
+        "trazado": "recto",
+        "amplitud_curva": 0,
+        "separador": true,
+        "combinacion_independiente": true,
+        "dimensiones": "propias, no copiadas de planos",
+        "validacion_estructural": false
+      },
+      "taxonomia_version": 2,
+      "sha256": "86cdce77bcadc7b37490a9b64e602f75133a2a434a0d40b72b7cf8149a83fd33",
+      "puntos": 22000,
+      "superpuntos": 365,
+      "aristas": 4690,
+      "histograma_mascaras": [
+        5304,
+        4238,
+        3875,
+        1988,
+        1163,
+        765,
+        2565,
+        1127,
+        717,
+        258,
+        0,
+        0
+      ],
+      "marco": {
+        "centro": [
+          0.20985515415668488,
+          -0.18267154693603516,
+          -1.193077564239502
+        ],
+        "rotacion": [
+          [
+            0.9999978115860922,
+            0.0020920858076076175,
+            0.0
+          ],
+          [
+            -0.0020920858076076175,
+            0.9999978115860922,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "perfil_spg": "mismas funciones M1: geof45, partición k10 lambda.03, Delaunay13, 128x8",
+      "original_sin_modificar": true,
+      "archivo": "grafos/m3_uniforme_03.npz"
+    },
+    {
+      "id": "m3_uniforme_04",
+      "tipo": "sintetico",
+      "division": "train",
+      "situacion": "escena_general",
+      "parametros": {
+        "semilla": 91124,
+        "longitud": 58.32840809116177,
+        "ancho": 16.65881804579263,
+        "altura": 6.56562431883745,
+        "vanos": 4,
+        "familia_apoyo": "martillo",
+        "seccion_columna": "achaflanada",
+        "seccion_viga": "cajon_exterior",
+        "baranda": "barrera",
+        "trazado": "S",
+        "amplitud_curva": 5.503910554731405,
+        "separador": true,
+        "combinacion_independiente": true,
+        "dimensiones": "propias, no copiadas de planos",
+        "validacion_estructural": false
+      },
+      "taxonomia_version": 2,
+      "sha256": "359d91a41023a2ef4b6f8c10a88a5f855723294d26b25b03eb12f0bdea2bb943",
+      "puntos": 22000,
+      "superpuntos": 433,
+      "aristas": 5408,
+      "histograma_mascaras": [
+        2095,
+        6934,
+        4069,
+        2072,
+        1194,
+        849,
+        2587,
+        1190,
+        741,
+        269,
+        0,
+        0
+      ],
+      "marco": {
+        "centro": [
+          -0.6034851670265198,
+          -0.4869093894958496,
+          -1.1573739051818848
+        ],
+        "rotacion": [
+          [
+            0.9856144678156438,
+            -0.16900923297999226,
+            0.0
+          ],
+          [
+            0.16900923297999226,
+            0.9856144678156438,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "perfil_spg": "mismas funciones M1: geof45, partición k10 lambda.03, Delaunay13, 128x8",
+      "original_sin_modificar": true,
+      "archivo": "grafos/m3_uniforme_04.npz"
+    },
+    {
+      "id": "m3_uniforme_05",
+      "tipo": "sintetico",
+      "division": "train",
+      "situacion": "escena_general",
+      "parametros": {
+        "semilla": 91151,
+        "longitud": 38.024372511773265,
+        "ancho": 7.434376204264943,
+        "altura": 9.307659065838518,
+        "vanos": 4,
+        "familia_apoyo": "muro",
+        "seccion_columna": "muro_rectangular",
+        "seccion_viga": "cajon_exterior",
+        "baranda": "metal_horizontal",
+        "trazado": "arco",
+        "amplitud_curva": 3.489198856232348,
+        "separador": true,
+        "combinacion_independiente": true,
+        "dimensiones": "propias, no copiadas de planos",
+        "validacion_estructural": false
+      },
+      "taxonomia_version": 2,
+      "sha256": "235ea4b24dbce943a2b741cc0b17cb525cd7788fcc7e35144117fd3f5c8ae4f2",
+      "puntos": 22000,
+      "superpuntos": 568,
+      "aristas": 7580,
+      "histograma_mascaras": [
+        1707,
+        3848,
+        3696,
+        4637,
+        1876,
+        810,
+        2639,
+        1748,
+        736,
+        303,
+        0,
+        0
+      ],
+      "marco": {
+        "centro": [
+          4.362457275390625,
+          1.791767954826355,
+          -0.8379803895950317
+        ],
+        "rotacion": [
+          [
+            0.9997159789434257,
+            0.02383194169991219,
+            0.0
+          ],
+          [
+            -0.02383194169991219,
+            0.9997159789434257,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "perfil_spg": "mismas funciones M1: geof45, partición k10 lambda.03, Delaunay13, 128x8",
+      "original_sin_modificar": true,
+      "archivo": "grafos/m3_uniforme_05.npz"
+    },
+    {
+      "id": "m3_uniforme_06",
+      "tipo": "sintetico",
+      "division": "train",
+      "situacion": "escena_general",
+      "parametros": {
+        "semilla": 91180,
+        "longitud": 41.00023526049791,
+        "ancho": 13.437888834590094,
+        "altura": 4.066354124834138,
+        "vanos": 3,
+        "familia_apoyo": "muro",
+        "seccion_columna": "muro_rectangular",
+        "seccion_viga": "trapezoidal",
+        "baranda": "barrera",
+        "trazado": "arco",
+        "amplitud_curva": 5.185247160820033,
+        "separador": true,
+        "combinacion_independiente": true,
+        "dimensiones": "propias, no copiadas de planos",
+        "validacion_estructural": false
+      },
+      "taxonomia_version": 2,
+      "sha256": "8a9d015da172b2770a94565763a27c142cbb2c66bc1dceafe97ff68fcdc7e5de",
+      "puntos": 22000,
+      "superpuntos": 308,
+      "aristas": 3784,
+      "histograma_mascaras": [
+        1147,
+        3548,
+        4436,
+        2405,
+        2538,
+        956,
+        3309,
+        2321,
+        962,
+        378,
+        0,
+        0
+      ],
+      "marco": {
+        "centro": [
+          -3.9964613914489746,
+          2.706373453140259,
+          -0.5541683435440063
+        ],
+        "rotacion": [
+          [
+            0.9999940274459665,
+            0.0034561644051522397,
+            0.0
+          ],
+          [
+            -0.0034561644051522397,
+            0.9999940274459665,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "perfil_spg": "mismas funciones M1: geof45, partición k10 lambda.03, Delaunay13, 128x8",
+      "original_sin_modificar": true,
+      "archivo": "grafos/m3_uniforme_06.npz"
+    },
+    {
+      "id": "m3_uniforme_07",
+      "tipo": "sintetico",
+      "division": "train",
+      "situacion": "escena_general",
+      "parametros": {
+        "semilla": 91211,
+        "longitud": 54.337322916316445,
+        "ancho": 16.16011282955167,
+        "altura": 4.962032777390454,
+        "vanos": 3,
+        "familia_apoyo": "muro",
+        "seccion_columna": "muro_rectangular",
+        "seccion_viga": "cajon_exterior",
+        "baranda": "metal_diagonal",
+        "trazado": "S",
+        "amplitud_curva": 2.909600792866322,
+        "separador": true,
+        "combinacion_independiente": true,
+        "dimensiones": "propias, no copiadas de planos",
+        "validacion_estructural": false
+      },
+      "taxonomia_version": 2,
+      "sha256": "9bbeca723f398e7b47925896e6ec605144b5644c38d00286e25fadcfdd4f6f7b",
+      "puntos": 22000,
+      "superpuntos": 643,
+      "aristas": 8344,
+      "histograma_mascaras": [
+        1105,
+        4677,
+        3165,
+        7388,
+        1054,
+        681,
+        2139,
+        978,
+        589,
+        224,
+        0,
+        0
+      ],
+      "marco": {
+        "centro": [
+          -3.4767308235168457,
+          -0.09058000147342682,
+          -0.10550704598426819
+        ],
+        "rotacion": [
+          [
+            0.9971889990443654,
+            -0.07492729933006184,
+            0.0
+          ],
+          [
+            0.07492729933006184,
+            0.9971889990443654,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "perfil_spg": "mismas funciones M1: geof45, partición k10 lambda.03, Delaunay13, 128x8",
+      "original_sin_modificar": true,
+      "archivo": "grafos/m3_uniforme_07.npz"
+    },
+    {
+      "id": "m3_uniforme_08",
+      "tipo": "sintetico",
+      "division": "train",
+      "situacion": "escena_general",
+      "parametros": {
+        "semilla": 91240,
+        "longitud": 59.88527353167009,
+        "ancho": 11.01339020135882,
+        "altura": 3.501394470600995,
+        "vanos": 4,
+        "familia_apoyo": "pilotes",
+        "seccion_columna": "octogonal",
+        "seccion_viga": "I",
+        "baranda": "metal_horizontal",
+        "trazado": "arco",
+        "amplitud_curva": 2.3136910981530203,
+        "separador": true,
+        "combinacion_independiente": true,
+        "dimensiones": "propias, no copiadas de planos",
+        "validacion_estructural": false
+      },
+      "taxonomia_version": 2,
+      "sha256": "cb2c231a58a53a5d7c86f872a57d930c36b8418d42a671c5c3cb3b4c239b5646",
+      "puntos": 22000,
+      "superpuntos": 714,
+      "aristas": 9650,
+      "histograma_mascaras": [
+        4296,
+        4760,
+        2709,
+        5523,
+        812,
+        583,
+        1793,
+        802,
+        531,
+        191,
+        0,
+        0
+      ],
+      "marco": {
+        "centro": [
+          0.14544890820980072,
+          0.8742198944091797,
+          -0.953748881816864
+        ],
+        "rotacion": [
+          [
+            0.9998413222190222,
+            -0.01781376948648303,
+            0.0
+          ],
+          [
+            0.01781376948648303,
+            0.9998413222190222,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "perfil_spg": "mismas funciones M1: geof45, partición k10 lambda.03, Delaunay13, 128x8",
+      "original_sin_modificar": true,
+      "archivo": "grafos/m3_uniforme_08.npz"
+    },
+    {
+      "id": "m3_uniforme_09",
+      "tipo": "sintetico",
+      "division": "train",
+      "situacion": "escena_general",
+      "parametros": {
+        "semilla": 91271,
+        "longitud": 64.74067771682816,
+        "ancho": 11.051940339963474,
+        "altura": 9.497726615158854,
+        "vanos": 3,
+        "familia_apoyo": "muro",
+        "seccion_columna": "muro_rectangular",
+        "seccion_viga": "trapezoidal",
+        "baranda": "mixta",
+        "trazado": "recto",
+        "amplitud_curva": 0,
+        "separador": true,
+        "combinacion_independiente": true,
+        "dimensiones": "propias, no copiadas de planos",
+        "validacion_estructural": false
+      },
+      "taxonomia_version": 2,
+      "sha256": "10e03e05faafffa233616a68035c17865419483a69e70a6c787eec3fc787915f",
+      "puntos": 22000,
+      "superpuntos": 677,
+      "aristas": 8896,
+      "histograma_mascaras": [
+        1021,
+        4641,
+        3173,
+        7082,
+        1275,
+        654,
+        2178,
+        1126,
+        617,
+        233,
+        0,
+        0
+      ],
+      "marco": {
+        "centro": [
+          8.090124130249023,
+          -0.21800249814987183,
+          -0.038314878940582275
+        ],
+        "rotacion": [
+          [
+            0.9998876696202929,
+            -0.014988266787731425,
+            0.0
+          ],
+          [
+            0.014988266787731425,
+            0.9998876696202929,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "perfil_spg": "mismas funciones M1: geof45, partición k10 lambda.03, Delaunay13, 128x8",
+      "original_sin_modificar": true,
+      "archivo": "grafos/m3_uniforme_09.npz"
+    },
+    {
+      "id": "m3_uniforme_10",
+      "tipo": "sintetico",
+      "division": "train",
+      "situacion": "escena_general",
+      "parametros": {
+        "semilla": 91301,
+        "longitud": 82.29628260020107,
+        "ancho": 7.577510317098943,
+        "altura": 5.68171562336903,
+        "vanos": 2,
+        "familia_apoyo": "martillo",
+        "seccion_columna": "circular",
+        "seccion_viga": "T",
+        "baranda": "metal_horizontal",
+        "trazado": "arco",
+        "amplitud_curva": 13.124801329294032,
+        "separador": true,
+        "combinacion_independiente": true,
+        "dimensiones": "propias, no copiadas de planos",
+        "validacion_estructural": false
+      },
+      "taxonomia_version": 2,
+      "sha256": "2377f543937387c230d0de9ad5cee7c3553ab369c236fa676b3ad47fa47bc630",
+      "puntos": 22000,
+      "superpuntos": 762,
+      "aristas": 10392,
+      "histograma_mascaras": [
+        641,
+        2928,
+        3471,
+        8793,
+        1163,
+        706,
+        2322,
+        1106,
+        624,
+        246,
+        0,
+        0
+      ],
+      "marco": {
+        "centro": [
+          0.952043890953064,
+          4.346114158630371,
+          -0.1881919503211975
+        ],
+        "rotacion": [
+          [
+            0.9997555066643801,
+            -0.022111691347531073,
+            0.0
+          ],
+          [
+            0.022111691347531073,
+            0.9997555066643801,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "perfil_spg": "mismas funciones M1: geof45, partición k10 lambda.03, Delaunay13, 128x8",
+      "original_sin_modificar": true,
+      "archivo": "grafos/m3_uniforme_10.npz"
+    },
+    {
+      "id": "m3_uniforme_11",
+      "tipo": "sintetico",
+      "division": "train",
+      "situacion": "escena_general",
+      "parametros": {
+        "semilla": 91330,
+        "longitud": 41.51181110279984,
+        "ancho": 9.191142749668774,
+        "altura": 8.521549371836123,
+        "vanos": 2,
+        "familia_apoyo": "pilotes",
+        "seccion_columna": "ensanchada",
+        "seccion_viga": "T",
+        "baranda": "metal_diagonal",
+        "trazado": "arco",
+        "amplitud_curva": 2.4190889726613816,
+        "separador": true,
+        "combinacion_independiente": true,
+        "dimensiones": "propias, no copiadas de planos",
+        "validacion_estructural": false
+      },
+      "taxonomia_version": 2,
+      "sha256": "fb7a8e2684cd951d5eeeb896ecc6548b685240d5348d8ec48d83bb1eabb1cb73",
+      "puntos": 22000,
+      "superpuntos": 560,
+      "aristas": 7378,
+      "histograma_mascaras": [
+        2999,
+        3146,
+        3211,
+        5983,
+        1464,
+        711,
+        2228,
+        1363,
+        643,
+        252,
+        0,
+        0
+      ],
+      "marco": {
+        "centro": [
+          -0.5798103213310242,
+          1.0157889127731323,
+          -0.2468346804380417
+        ],
+        "rotacion": [
+          [
+            0.9994959532058497,
+            0.03174648839053245,
+            0.0
+          ],
+          [
+            -0.03174648839053245,
+            0.9994959532058497,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "perfil_spg": "mismas funciones M1: geof45, partición k10 lambda.03, Delaunay13, 128x8",
+      "original_sin_modificar": true,
+      "archivo": "grafos/m3_uniforme_11.npz"
+    }
+  ],
+  "Lurin_en_entrenamiento": false,
+  "puntos_por_clase": {
+    "columnas_pilares": 38054,
+    "vigas_cabezales": 49203,
+    "tablero": 39691,
+    "barandas_laterales": 60511,
+    "pista_accesos": 15606,
+    "separador_central": 8438,
+    "superficie_inferior_suelo_base": 27153,
+    "estribos": 14775,
+    "vegetacion": 7617,
+    "senales": 2952
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "condiciones": {
+    "sin_aumento": {
+      "corpus_base_sha256": "9977547d1b8037429fe7f145dfa9fd12d0089a4c62509162f772fe8d6d40b74b",
+      "lote_sha256": null
+    },
+    "uniforme": {
+      "corpus_base_sha256": "9977547d1b8037429fe7f145dfa9fd12d0089a4c62509162f772fe8d6d40b74b",
+      "lote_sha256": "173a163c9e11b91780903153f5b9708e806711fc3ef966f5745265b7744d8ea3"
+    },
+    "dirigido": {
+      "corpus_base_sha256": "9977547d1b8037429fe7f145dfa9fd12d0089a4c62509162f772fe8d6d40b74b",
+      "lote_sha256": "ef37fddcce097d67d51717abd13ea628016ce05c5488195947e037126b14ea78"
+    }
+  },
+  "epocas_maximas": 220,
+  "semilla": 614,
+  "densidad_por_escena": 22000,
+  "slots_sinteticos": 4,
+  "slots_adicionales_en_variantes": 1,
+  "validacion_utilizada_en_diagnostico": true,
+  "prueba_independiente": false
+}
