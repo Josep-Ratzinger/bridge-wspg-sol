@@ -1,3 +1,4 @@
 M1/nube_de_puntos_3D/fused.ply filter=lfs diff=lfs merge=lfs -text
 M1/limpieza_y_preparacion/procesamiento_manual/puente_orientacion_revision.ply filter=lfs diff=lfs merge=lfs -text
 M1/AdaPoinTr/resultados/completado/puente_completado.ply filter=lfs diff=lfs merge=lfs -text
+M1/clases/resultados/clases.npz filter=lfs diff=lfs merge=lfs -text

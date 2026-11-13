@@ -112,8 +112,17 @@ python -m M2 aplicar --modelo WSPG_SOL
 
 La predicción se guarda en `M2/resultados/WSPG_SOL/puente_etiquetado.ply`.
 Usa `--modelo WSPG` para obtener la predicción de la otra variante.
-La evaluación con etiquetas de referencia y el reentrenamiento de M3
-requieren sus datos adicionales.
+Para repetir la evaluación de M2, genera ambas predicciones con el mismo SPG
+y usa la referencia asistida incluida en `M1/clases/resultados/clases.npz`.
+
+```powershell
+python -m M2 aplicar --modelo WSPG
+python -m M2 aplicar --modelo WSPG_SOL
+python -m M2 evaluar
+python -m M2 visualizar
+```
+
+El reentrenamiento requiere los datos de entrenamiento de cada módulo.
 
 ## Instalación y uso
 
@@ -252,7 +261,7 @@ La pureza de los superpuntos requiere etiquetas de referencia; una imagen por
 colores no la acredita. Los parámetros del artículo tampoco son óptimos
 comprobados para nuestros puentes.
 
-Los tres PLY y los dos pesos de M2 descritos arriba se distribuyen con el repositorio.
+Los tres PLY, la referencia asistida de Lurín y los dos pesos de M2 se distribuyen con el repositorio.
 Los demás datos locales, resultados, pesos, entornos virtuales y la configuración de PyCharm
 se excluyen mediante `.gitignore`.
 
