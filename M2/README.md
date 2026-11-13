@@ -109,8 +109,9 @@ M2/
   tests/            # pruebas del método conservado
 ```
 
-Los datos y pesos están excluidos de Git; deben distribuirse por separado si
-se quiere aplicar los pesos ya entrenados. El código y el README son únicos.
+El repositorio incluye los checkpoints finales de WSPG y WSPG + SOL para
+inferencia. El corpus de entrenamiento, los pesos de inicialización y las
+etiquetas de referencia para evaluación se gestionan por separado.
 
 ## Fuentes
 

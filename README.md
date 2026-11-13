@@ -39,7 +39,7 @@ no son clases de componentes.
 
 ```text
 M1/
-  nube_de_puntos_3D/                    # fused.ply: lo añade el usuario
+  nube_de_puntos_3D/                    # fused.ply: nube reconstruida de Lurín
   limpieza_y_preparacion/
     procesamiento_manual/              # puente_orientacion_revision.ply
     nube.py
@@ -84,6 +84,36 @@ El SPG vigente se calculó desde el puente completado aprobado y conserva
 de densidad de limpieza. Los resultados SPG anteriores se descartaron. La nube recortada manualmente está en
 `M1/limpieza_y_preparacion/procesamiento_manual/puente_orientacion_revision.ply`.
 La reconstrucción original está en `M1/nube_de_puntos_3D/fused.ply`.
+
+## Reproducir Lurín desde un PLY
+
+Instala Git LFS y descarga los datos desde la raíz del repositorio.
+
+```powershell
+git lfs install
+git lfs pull
+```
+
+| Archivo | Punto de partida |
+|---|---|
+| `M1/nube_de_puntos_3D/fused.ply` | Nube densa reconstruida. Permite revisar o repetir el recorte manual. |
+| `M1/limpieza_y_preparacion/procesamiento_manual/puente_orientacion_revision.ply` | Nube recortada y orientada. Permite empezar con la reducción y la limpieza. |
+| `M1/AdaPoinTr/resultados/completado/puente_completado.ply` | Nube completada. Permite empezar con SPG y la clasificación. |
+
+Para reproducir SPG y segmentar con los pesos publicados de M2, usa Python 3.11
+y un entorno virtual activo.
+
+```powershell
+python -m pip install torch==2.7.1
+python -m pip install -r requirements.txt -r M2/requirements.txt
+python -m M1.SPG
+python -m M2 aplicar --modelo WSPG_SOL
+```
+
+La predicción se guarda en `M2/resultados/WSPG_SOL/puente_etiquetado.ply`.
+Usa `--modelo WSPG` para obtener la predicción de la otra variante.
+La evaluación con etiquetas de referencia y el reentrenamiento de M3
+requieren sus datos adicionales.
 
 ## Instalación y uso
 
@@ -222,8 +252,9 @@ La pureza de los superpuntos requiere etiquetas de referencia; una imagen por
 colores no la acredita. Los parámetros del artículo tampoco son óptimos
 comprobados para nuestros puentes.
 
-Datos, resultados, pesos de redes, entorno virtual y configuración de PyCharm
-quedan fuera de Git mediante `.gitignore`.
+Los tres PLY y los dos pesos de M2 descritos arriba se distribuyen con el repositorio.
+Los demás datos locales, resultados, pesos, entornos virtuales y la configuración de PyCharm
+se excluyen mediante `.gitignore`.
 
 ## Comprobaciones y fuentes
 
