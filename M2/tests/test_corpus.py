@@ -2,8 +2,8 @@ import unittest,tempfile,zipfile
 from pathlib import Path
 import numpy as np
 import torch
-from M2.corpus import read_semantic
-from M2.utilidades import partial_loss,allowed_matrix,centros_relativos,resumen
+from M2.preparacion_datos.corpus import read_semantic
+from M2.comun.utilidades import partial_loss,allowed_matrix,centros_relativos,resumen
 
 class CorpusFinal(unittest.TestCase):
     def test_lectura_zip_conserva_xyz_y_labels_sin_usar_rgb(self):

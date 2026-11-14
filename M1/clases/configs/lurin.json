@@ -40,7 +40,7 @@
     "base": "dar categoria propia a la superficie bajo columnas; no se confirma si es suelo, pavimento o cimentacion"
   },
   "fuentes_visuales": {
-    "fotogramas": "D:/USUARIO/Documentos/Nube de puntos tesis/Prueba 2/images",
+    "fotogramas": "D:/USUARIO/Documentos/Nube de puntos tesis/WSPG_SOL_Data/M1/01_reconstruccion_COLMAP/proyecto_COLMAP_Lurin/images",
     "muestra_revisada": ["v1_00001.jpg", "v1_00011.jpg", "v1_00021.jpg", "v1_00031.jpg", "v1_00042.jpg", "v1_00052.jpg", "v1_00062.jpg", "v1_00072.jpg", "v1_00083.jpg", "v1_00093.jpg", "v1_00103.jpg", "v1_00113.jpg", "v1_00124.jpg", "v1_00134.jpg", "v1_00144.jpg", "v1_00155.jpg"],
     "vistas_nube": ["resultados/revision/vistas_observadas.png", "resultados/revision/bandas_altura.png"]
   },

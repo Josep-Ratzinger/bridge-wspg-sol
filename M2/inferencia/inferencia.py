@@ -4,10 +4,10 @@ from pathlib import Path
 import numpy as np
 import torch
 from plyfile import PlyData,PlyElement
-from .datos import ROOT,MODELOS,RESULTADOS,CLASSES,MASKS,PALETA,firma,guardar
-from .utilidades import centros_relativos,tensors
-from .estructura import calcular
-from .WSPG.relacional import WSPGRelacional
+from M2.comun.datos import resultados_modelo,ROOT,MODELOS,CLASSES,MASKS,PALETA,firma,guardar
+from M2.comun.utilidades import centros_relativos,tensors
+from M2.comun.estructura import calcular
+from M2.WSPG.relacional import WSPGRelacional
 
 
 def cargar_modelo(nombre='WSPG_SOL',modelos=MODELOS):
@@ -51,7 +51,7 @@ def aplicar(nombre='WSPG_SOL',spg=ROOT/'M1/SPG/resultados',salida=None,modelos=M
     for k in original.dtype.names:v[k]=original[k]
     for a,k in enumerate(['red','green','blue']):v[k+'_spg']=original[k];v[k]=PALETA[pred[group],a]
     v['clase_predicha']=pred[group];v['confianza']=conf[group]
-    dest=Path(salida) if salida else RESULTADOS/nombre;dest.mkdir(parents=True,exist_ok=True)
+    dest=Path(salida) if salida else resultados_modelo(nombre);dest.mkdir(parents=True,exist_ok=True)
     PlyData([PlyElement.describe(v,'vertex')],text=False,comments=list(source.comments)+[
         'Prediccion aprendida en otros puentes; sin etiquetas Lurin en inferencia',
         'RGB de grupos originales en red_spg green_spg blue_spg']).write(str(dest/'puente_etiquetado.ply'))

@@ -1,7 +1,7 @@
 """Normalización y supervisión parcial compartidas por entrenamiento e inferencia."""
 import numpy as np
 import torch
-from .datos import MASKS,CLASSES
+from M2.comun.datos import MASKS,CLASSES
 def centros_relativos(centros):
     low,high=np.percentile(centros,[1,99],axis=0)
     return ((centros-(low+high)/2)/(high-low).clip(.01)).clip(-2,2).astype('f4')

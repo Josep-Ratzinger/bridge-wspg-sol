@@ -6,13 +6,13 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
-from .datos import ROOT,BASE,RESULTADOS,PALETA
+from M2.comun.datos import resultados_modelo,ROOT,BASE,RESULTADOS,PALETA
 PALETTE=PALETA/255
 CLASSES=['columnas','vigas/cabezales','tablero','barandas','accesos','separador','suelo/base','estribos','vegetación','señales']
 def comparacion():
     report={'WSPG':'WSPG','WSPG_SOL':'WSPG_SOL'}
     names=[report['WSPG'],report['WSPG_SOL']]
-    predicted=[PlyData.read(str(RESULTADOS/n/'puente_etiquetado.ply'))['vertex'].data for n in names]
+    predicted=[PlyData.read(str(resultados_modelo(n)/'puente_etiquetado.ply'))['vertex'].data for n in names]
     xyz=np.column_stack([predicted[0][k] for k in ['x','y','z']])
     with np.load(ROOT/'M1/clases/resultados/clases.npz') as f:assisted=f['clase_propuesta'];origin=f['origen']
     arrays=[assisted]+[v['clase_predicha'] for v in predicted]

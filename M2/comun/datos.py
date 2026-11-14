@@ -3,11 +3,23 @@ import hashlib
 import json
 from pathlib import Path
 import numpy as np
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=Path(__file__).resolve().parents[2]
 BASE=ROOT/'M2'
-CORPUS=BASE/'datos/corpus'
+from rutas_datos import DATOS
+CORPUS=DATOS/'M2/01_corpus_entrenamiento'
 MODELOS=BASE/'modelos'
 RESULTADOS=BASE/'resultados'
+
+def resultados_modelo(nombre, carpeta=RESULTADOS):
+    carpeta = Path(carpeta)
+    if carpeta == RESULTADOS:
+        modulo = {'WSPG': 'WSPG', 'WSPG_SOL': 'SOL'}[nombre]
+        destino = BASE / modulo / 'resultados'
+        anterior = carpeta / nombre
+        if anterior.is_dir() and not destino.is_dir():
+            return anterior
+        return destino
+    return carpeta / nombre
 CLASSES=['columnas_pilares','vigas_cabezales','tablero','barandas_laterales','pista_accesos','separador_central','superficie_inferior_suelo_base','estribos','vegetacion','senales']
 MASKS=np.array([1<<k for k in range(10)]+[80,6],dtype='i4')
 PALETA=np.array([[230,65,60],[245,155,35],[45,125,225],[150,70,200],[55,175,105],[35,200,215],[155,105,65],[200,170,120],[40,110,40],[245,210,30]],dtype='u1')

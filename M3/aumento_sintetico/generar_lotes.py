@@ -5,7 +5,7 @@ import sys
 from tempfile import TemporaryDirectory
 
 import numpy as np
-from .rutas import DATOS
+from ..configuracion.rutas import LOTES
 from scipy.spatial import cKDTree
 
 
@@ -62,14 +62,14 @@ def escena(generar, semilla, situacion):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument('--salida', type=Path, default=DATOS / 'datos_sinteticos')
+    parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[2])
+    parser.add_argument('--salida', type=Path, default=LOTES)
     args = parser.parse_args()
     sys.path.insert(0, str(args.repo.resolve()))
-    from M2.corpus import preparar_grafo
-    from M2.datos import CLASSES, MASKS, firma, guardar
-    from M2.estructura import calcular
-    from M2.sinteticos import generar
+    from M2.preparacion_datos.corpus import preparar_grafo
+    from M2.comun.datos import CLASSES, MASKS, firma, guardar
+    from M2.comun.estructura import calcular
+    from M2.preparacion_datos.sinteticos import generar
 
     situaciones = ('baranda_tablero', 'senal_entorno', 'estribo_terreno')
     for lote in ('uniforme', 'dirigido'):

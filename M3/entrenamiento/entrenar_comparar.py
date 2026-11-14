@@ -6,23 +6,23 @@ import sys
 
 import numpy as np
 import torch
-from .rutas import DATOS
+from ..configuracion.rutas import EXPERIMENTO, LOTES
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument('--datos', type=Path, default=DATOS / 'datos_sinteticos')
-    parser.add_argument('--salida', type=Path, default=DATOS / 'experimento')
+    parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[2])
+    parser.add_argument('--datos', type=Path, default=LOTES)
+    parser.add_argument('--salida', type=Path, default=EXPERIMENTO)
     parser.add_argument('--exportar-ply', action='store_true')
     args = parser.parse_args()
     sys.path.insert(0, str(args.repo.resolve()))
-    from M2 import entrenamiento
-    from M2.corpus import cargar
-    from M2.datos import CORPUS, MODELOS, ROOT, firma, guardar
-    from M2.evaluacion import metricas_lurin
-    from M2.inferencia import aplicar, cargar_modelo, leer_spg
-    from M2.utilidades import resumen, tensors
+    from M2.entrenamiento import entrenamiento
+    from M2.preparacion_datos.corpus import cargar
+    from M2.comun.datos import CORPUS, MODELOS, ROOT, firma, guardar
+    from M2.evaluacion.evaluacion import metricas_lurin
+    from M2.inferencia.inferencia import aplicar, cargar_modelo, leer_spg
+    from M2.comun.utilidades import resumen, tensors
 
     output = args.salida
     epochs = 220

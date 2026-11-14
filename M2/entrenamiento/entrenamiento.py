@@ -3,13 +3,13 @@ import argparse,json,time
 from pathlib import Path
 import numpy as np
 import torch
-from .datos import BASE,CORPUS,MODELOS,CLASSES,firma,guardar
-from .corpus import cargar
-from .utilidades import tensors,allowed_matrix,partial_loss,resumen
-from .WSPG.modelo import WSPG
-from .WSPG.relacional import WSPGRelacional
-from .SOL.estructural import preparar as preparar_sol,perdida as loss_sol
-from .estructura import NOMBRES
+from M2.comun.datos import BASE,CORPUS,MODELOS,CLASSES,firma,guardar
+from M2.preparacion_datos.corpus import cargar
+from M2.comun.utilidades import tensors,allowed_matrix,partial_loss,resumen
+from M2.WSPG.modelo import WSPG
+from M2.WSPG.relacional import WSPGRelacional
+from M2.SOL.estructural import preparar as preparar_sol,perdida as loss_sol
+from M2.comun.estructura import NOMBRES
 
 
 def planificar(data,rng):

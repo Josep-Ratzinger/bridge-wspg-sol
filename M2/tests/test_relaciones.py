@@ -1,13 +1,13 @@
 import unittest
 import numpy as np
 import torch
-from M2.taxonomia import semanticbridge,uav
-from M2.estructura import calcular,costes
+from M2.preparacion_datos.taxonomia import semanticbridge,uav
+from M2.comun.estructura import calcular,costes
 from M2.SOL.estructural import preparar,perdida
 from M2.WSPG.relacional import WSPGRelacional
-from M2.evaluacion import no_regresion
-from M2.datos import CLASSES
-from M2.sinteticos import generar
+from M2.evaluacion.evaluacion import no_regresion
+from M2.comun.datos import CLASSES
+from M2.preparacion_datos.sinteticos import generar
 
 
 class Relaciones(unittest.TestCase):

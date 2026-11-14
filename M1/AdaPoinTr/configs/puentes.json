@@ -4,7 +4,7 @@
   "commit": "4603257ed3db9e7dad349b712e1b2fe0da207015",
   "input_ply": "M1/limpieza_y_preparacion/resultados/preparado/puente_preparado.ply",
   "input_npz": "M1/limpieza_y_preparacion/resultados/preparado/preparacion.npz",
-  "data_root": "D:\\USUARIO\\Documentos\\Nube de puntos tesis\\AdaPoinTr_Data",
+  "data_root": "D:\\USUARIO\\Documentos\\Nube de puntos tesis\\WSPG_SOL_Data\\M1\\03_completado_AdaPoinTr\\dataset_sintetico_AdaPoinTr",
   "upstream_architecture_config": "cfgs/PCN_models/AdaPoinTr.yaml",
   "training_method": "AdaPoinTr supervisado con conjuntos sintéticos y deterioros combinados; ajuste geométrico automático en inferencia",
   "checkpoint": "modelos/completado_contextual/mejor.pt",

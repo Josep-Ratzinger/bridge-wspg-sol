@@ -34,8 +34,8 @@ python -m M2 evaluar
 python -m M2 visualizar
 ```
 
-Se generan `resultados/WSPG/puente_etiquetado.ply`, la salida equivalente de
-`WSPG_SOL`, `evaluacion.json`, `comparacion.png` y `barandas.png`. Las figuras
+Los PLY se guardan en `WSPG/resultados/` y `SOL/resultados/`. La carpeta
+compartida `resultados/` guarda `evaluacion.json`, `comparacion.png` y `barandas.png`. Las figuras
 muestran anotación asistida previa, WSPG y WSPG + SOL. Los recortes son solo
 ventanas de visualización; ambos PLY contienen todos los puntos.
 
@@ -102,6 +102,11 @@ como limitaciones del resultado cerrado y no se eliminan para subir la media.
 M2/
   WSPG/             # modelo y corrección residual
   SOL/              # relaciones estructurales de la versión final
+  preparacion_datos/ # corpus, taxonomía y generación sintética
+  entrenamiento/    # ajuste de WSPG y WSPG + SOL
+  inferencia/       # aplicación de los pesos al SPG
+  evaluacion/       # métricas y visualización comparativa
+  comun/            # rutas, atributos estructurales y utilidades compartidas
   configs/          # especificación del corpus y control de aceptación
   datos/            # corpus final y fuente Seokdap conservada
   modelos/          # WSPG, WSPG_SOL e inicialización de entrenamiento

@@ -4,10 +4,11 @@ from pathlib import Path
 import numpy as np
 from scipy.spatial import cKDTree
 from plyfile import PlyData
-from .datos import ROOT,BASE,CORPUS,CLASSES,MASKS,SOURCES,firma,guardar
-from .taxonomia import semanticbridge,uav
-from .estructura import calcular as estructura
-from .sinteticos import generar
+from M2.comun.datos import ROOT,BASE,CORPUS,CLASSES,MASKS,SOURCES,firma,guardar
+from M2.preparacion_datos.taxonomia import semanticbridge,uav
+from M2.comun.estructura import calcular as estructura
+from M2.preparacion_datos.sinteticos import generar
+from rutas_datos import FUENTES_M2
 from M1.SPG.geometria import calcular_geometria,elevacion_z_minmax,descriptores
 from M1.SPG.particion import grafo_vecinos,resolver_particion
 from M1.SPG.grafo import aristas_voronoi,agregar_conexiones
@@ -107,7 +108,7 @@ def cargar(corpus=CORPUS):
     corpus=Path(corpus);manifest=json.loads((corpus/'manifiesto.json').read_text(encoding='utf8'))
     if manifest.get('taxonomia_version')!=2:raise ValueError('Se requiere corpus final con superestructura ambigua')
     data=[]
-    from .utilidades import centros_relativos
+    from M2.comun.utilidades import centros_relativos
     for row in manifest['puentes']:
         path=corpus/row['archivo']
         if firma(path)!=row['sha256']:raise ValueError('Datos modificados: '+row['id'])
@@ -144,7 +145,7 @@ def preparar(fuentes=None,corpus=CORPUS):
             masks=semanticbridge(labels)
         else:
             name=identity.split('_',1)[1].capitalize()+' Bridge_annotation.ply'
-            path=BASE/'datos/fuentes'/name if identity=='uav_seokdap' else fuentes/'datasets_reales/uav_lidar'/name
+            path=FUENTES_M2/name if identity=='uav_seokdap' else fuentes/'datasets_reales/uav_lidar'/name
             if not path.exists() and identity=='uav_seokdap':
                 path.parent.mkdir(parents=True,exist_ok=True)
                 urllib.request.urlretrieve('https://zenodo.org/api/records/18531104/files/Seokdap%20Bridge_annotation.ply/content',path)

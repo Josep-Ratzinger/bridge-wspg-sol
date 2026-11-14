@@ -11,11 +11,11 @@ def main():
     parser.add_argument('comando',choices=['preparar','entrenar','aplicar','evaluar','visualizar'],nargs='?')
     if not args:parser.print_help();return
     command,rest=args[0],args[1:]
-    if command=='preparar':from .corpus import main as run
-    elif command=='entrenar':from .entrenamiento import main as run
-    elif command=='aplicar':from .inferencia import main as run
-    elif command=='evaluar':from .evaluacion import main as run
-    elif command=='visualizar':from .visualizacion import main as run
+    if command=='preparar':from M2.preparacion_datos.corpus import main as run
+    elif command=='entrenar':from M2.entrenamiento.entrenamiento import main as run
+    elif command=='aplicar':from M2.inferencia.inferencia import main as run
+    elif command=='evaluar':from M2.evaluacion.evaluacion import main as run
+    elif command=='visualizar':from M2.evaluacion.visualizacion import main as run
     else:parser.parse_args([command]);return
     sys.argv=[sys.argv[0]]+rest;run()
 

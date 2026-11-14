@@ -1,7 +1,43 @@
-# Segmentación de puentes con SPG, WSPG y SOL
+# Segmentación semántica de puentes con WSPG + SOL
 
-Proyecto de tesis para preparar nubes de puntos y evaluar su segmentación
-semántica. Python 3.11 de 64 bits.
+Este proyecto de tesis procesa nubes de puntos de puentes y clasifica sus componentes.
+El caso de aplicación es el puente de Lurín.
+
+| Módulo | Entrada | Salida |
+|---|---|---|
+| [M1](M1) | Videos MP4 o nube PLY | Nube preparada, completada y representada como grafo de superpuntos |
+| [M2](M2/README.md) | Grafo SPG y pesos entrenados | Nube etiquetada por componentes y comparación WSPG frente a WSPG + SOL |
+| [M3](M3/README.md) | Corpus de M2 y diagnóstico por clase | Comparación sin aumento adicional, con aumento uniforme y con aumento dirigido |
+
+![Comparación de la anotación asistida, WSPG y WSPG + SOL en Lurín](docs/images/lurin_m2.png)
+
+## Inicio rápido desde el puente completado
+
+Instala Git LFS y ejecuta los comandos desde la raíz del repositorio con Python 3.11.
+
+```powershell
+git lfs install
+git lfs pull
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install torch==2.7.1
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt -r M2/requirements.txt
+.\.venv\Scripts\python.exe -m M1.SPG
+.\.venv\Scripts\python.exe -m M2 aplicar --modelo WSPG_SOL
+```
+
+El PLY etiquetado queda en `M2/SOL/resultados/puente_etiquetado.ply`.
+Para reproducir ambas predicciones y compararlas con la referencia asistida, sigue la [guía de M2](M2/README.md).
+
+El repositorio distribuye el PLY denso, el PLY recortado y el PLY completado de Lurín.
+El PLY completado inicia la ejecución de SPG. Los otros dos permiten repetir fases previas.
+También incluye la referencia asistida de Lurín y los dos pesos finales de M2.
+Para repetir el entrenamiento se requiere el corpus y la inicialización de M2.
+
+## Datos de entrada y entrenamiento
+
+`WSPG_SOL_Data` reúne la reconstrucción de Lurín, el recorte manual, los
+sintéticos de AdaPoinTr, el corpus y las fuentes reales de M2, y los lotes de M3.
+Las salidas generadas y los pesos se guardan en las carpetas de cada módulo.
 
 ## Estado
 
@@ -130,8 +166,8 @@ Con el entorno virtual del proyecto activo:
 
 ```powershell
 python -m pip install -r requirements.txt
-python main.py revisar "M1/nube_de_puntos_3D/fused.ply"
-python main.py reducir M1/limpieza_y_preparacion/procesamiento_manual/puente_orientacion_revision.ply --celda 0.03
+python main.py revisar "D:/USUARIO/Documentos/Nube de puntos tesis/WSPG_SOL_Data/M1/01_reconstruccion_COLMAP/fused.ply"
+python main.py reducir "D:/USUARIO/Documentos/Nube de puntos tesis/WSPG_SOL_Data/M1/02_limpieza_y_preparacion/recorte_manual/puente_orientacion_revision.ply" --celda 0.03
 python main.py limpiar
 # Después de aceptar la preparación:
 .\M1\AdaPoinTr\scripts\completar.ps1

@@ -3,6 +3,8 @@
 import argparse
 from pathlib import Path
 
+from rutas_datos import RECORTE
+
 RAIZ = Path(__file__).resolve().parent
 LIMPIEZA = RAIZ / "M1" / "limpieza_y_preparacion"
 SPG = RAIZ / "M1" / "SPG"
@@ -59,7 +61,7 @@ def main():
     pureza.add_argument("--campo", default="clase")
     pureza.add_argument("--salida", type=Path, default=CLASES / "resultados" / "pureza")
     limpieza = comandos.add_parser("limpiar", help="Filtrar ruido residual y preparar una normalización reversible antes del completado.")
-    limpieza.add_argument("archivo", type=Path, nargs="?", default=LIMPIEZA / "procesamiento_manual" / "puente_orientacion_revision.ply")
+    limpieza.add_argument("archivo", type=Path, nargs="?", default=RECORTE / "puente_orientacion_revision.ply")
     limpieza.add_argument("reduccion", type=Path, nargs="?", default=LIMPIEZA / "resultados" / "reduccion.npz")
     limpieza.add_argument("--vecinos", type=int, default=20)
     limpieza.add_argument("--desviaciones", type=float, default=3.0)

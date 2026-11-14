@@ -2,8 +2,8 @@
 import argparse,json
 from pathlib import Path
 import numpy as np
-from .datos import ROOT,BASE,RESULTADOS,CLASSES,firma,guardar
-from .utilidades import resumen
+from M2.comun.datos import resultados_modelo,ROOT,BASE,RESULTADOS,CLASSES,firma,guardar
+from M2.comun.utilidades import resumen
 def metricas_lurin(pred,ref,origin,xyz):
     valid=(ref>=0)&(origin==0)
     cm=np.bincount(ref[valid].astype('i8')*10+pred[valid],minlength=100).reshape(10,10)
@@ -42,9 +42,9 @@ def evaluar(spg=ROOT/'M1/SPG/resultados',referencia=ROOT/'M1/clases/resultados/c
     if len(ref)!=len(group):raise ValueError('La referencia debe conservar el orden de los puntos de M1')
     reports={}
     for name in ['WSPG','WSPG_SOL']:
-        meta=json.loads((resultados/name/'verificacion.json').read_text(encoding='utf8'))
+        meta=json.loads((resultados_modelo(name, resultados)/'verificacion.json').read_text(encoding='utf8'))
         if meta['entrada_sha256']['particion']!=firma(partition):raise ValueError('Predicción de otro SPG')
-        with np.load(resultados/name/'predicciones.npz') as f:pred=f['clase_por_superpunto'][group]
+        with np.load(resultados_modelo(name, resultados)/'predicciones.npz') as f:pred=f['clase_por_superpunto'][group]
         reports[name]=metricas_lurin(pred,ref,origin,xyz)
     control=json.loads((BASE/'configs/aceptacion.json').read_text(encoding='utf8'))
     same=control['particion_sha256']==firma(partition);safe=None

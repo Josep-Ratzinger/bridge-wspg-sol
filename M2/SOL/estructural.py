@@ -5,7 +5,7 @@ Solo se castiga evidencia observada contradictoria; una conexión ausente no
 prueba que el componente sea incorrecto. Gravedad Z y tablero vial continuo.
 """
 import torch
-from ..estructura import costes
+from M2.comun.estructura import costes
 
 
 def preparar(features,edges,device):

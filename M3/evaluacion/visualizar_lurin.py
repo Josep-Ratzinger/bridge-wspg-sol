@@ -2,14 +2,15 @@
 import argparse
 from pathlib import Path
 import numpy as np
-from .rutas import DATOS
-from PIL import Image, ImageDraw, ImageFont
+from ..configuracion.rutas import RESULTADOS
+
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[1])
-    p.add_argument('--resultados', type=Path, default=DATOS / 'experimento/resultados')
+    p.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[2])
+    p.add_argument('--resultados', type=Path, default=RESULTADOS)
     args = p.parse_args()
+    from PIL import Image, ImageDraw, ImageFont
     out = args.resultados
     spg = args.repo / 'M1/SPG/resultados'
     with np.load(spg / 'superpuntos/superpuntos.npz') as f:
@@ -56,7 +57,7 @@ def main():
         x,y = 55+(i%5)*330, 1221+(i//5)*32
         draw.rectangle((x,y+3,x+19,y+21),fill=tuple(palette[i]))
         draw.text((x+30,y),name,fill='#152439',font=font)
-    image.save(out / 'comparacion_lurin.png')
+    image.save((out.parent if out == RESULTADOS else out) / 'comparacion_lurin.png')
 
 if __name__ == '__main__':
     main()

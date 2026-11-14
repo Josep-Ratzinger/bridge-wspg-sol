@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from M2.sinteticos import generar
+from M2.preparacion_datos.sinteticos import generar
 
 class SinteticosFinales(unittest.TestCase):
     def test_combinaciones_sin_dependencia_modular_y_barandas_abiertas(self):

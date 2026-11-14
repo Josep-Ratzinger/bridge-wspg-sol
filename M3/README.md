@@ -18,15 +18,21 @@ los manifiestos y el protocolo de esta prueba. La referencia asistida de Lurín
 se aplica a los puntos observados. Los puentes externos participaron en el
 diagnóstico y la selección de pesos.
 
+## Carpetas por etapa
+
+- `aumento_sintetico/` genera los lotes uniforme y dirigido.
+- `entrenamiento/` ejecuta la comparación controlada.
+- `evaluacion/` reúne el código de visualización, las métricas y las predicciones locales.
+
 ## Reproducir
 
 Ejecutar desde la raíz con el entorno de M2. Usar carpetas de salida con
 permiso de escritura y espacio suficiente, preferiblemente en otro disco.
 
 ```powershell
-python -m M3.generar_lotes --salida "D:\USUARIO\Documentos\Nube de puntos tesis\M3_Data\datos_sinteticos"
-python -m M3.entrenar_comparar --datos "D:\USUARIO\Documentos\Nube de puntos tesis\M3_Data\datos_sinteticos" --salida "D:\USUARIO\Documentos\Nube de puntos tesis\M3_Data\experimento"
-python -m M3.visualizar_lurin --resultados "D:\USUARIO\Documentos\Nube de puntos tesis\M3_Data\experimento\resultados"
+python -m M3 generar-lotes --salida "D:\USUARIO\Documentos\Nube de puntos tesis\M3_Data\datos_sinteticos"
+python -m M3 entrenar-comparar --datos "D:\USUARIO\Documentos\Nube de puntos tesis\M3_Data\datos_sinteticos" --salida "D:\USUARIO\Documentos\Nube de puntos tesis\M3_Data\experimento"
+python -m M3 visualizar-lurin --resultados "D:\USUARIO\Documentos\Nube de puntos tesis\M3_Data\experimento\resultados"
 ```
 
 La visualización requiere Pillow. El entrenamiento usa la inicialización, el
@@ -43,5 +49,5 @@ Los comandos usan esa carpeta por defecto. Se puede cambiar mediante
 Para visualizar la prueba guardada:
 
 ```powershell
-python -m M3.visualizar_lurin
+python -m M3 visualizar-lurin
 ```
